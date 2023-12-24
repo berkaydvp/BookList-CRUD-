@@ -1,0 +1,21 @@
+﻿@model Book
+<form class="p-4" asp-action="AddBook" asp-controller="Add">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Kitabın adı</label>
+        <input asp-for="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Kitabın yazarı</label>
+        <input asp-for="Author" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Kitabın türü</label>
+        <input asp-for="CategoryName"  class="form-control" id="exampleInputPassword1">
+    </div>
+    <label for="zort">Okunma durumu</label>
+    <select asp-for="isRead" id="zort" class="form-select" aria-label="Default select example">
+        <option value="false">Okunacak</option>
+        <option value="true">Okundu</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
